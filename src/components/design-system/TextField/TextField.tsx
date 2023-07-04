@@ -15,7 +15,7 @@ export interface InputProps
   style?: CSSProperties;
 }
 
-const Input: React.FC<InputProps> = ({
+export const TextField: React.FC<InputProps> = ({
   label,
   icon,
   isDisabled,
@@ -64,12 +64,10 @@ const Input: React.FC<InputProps> = ({
   );
 };
 
-Input.defaultProps = {
+TextField.defaultProps = {
   label: "Input Label",
   icon: <></>,
   isDisabled: false,
   name: "input",
   onChange: (e) => true,
 };
-
-export default React.memo(Input);

@@ -1,28 +1,27 @@
-import { cn } from "@/libs/utils";
+import { cn } from "../../../libs/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Loader2 } from "lucide-react";
 import * as React from "react";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 rounded-3xl	antialiased",
+  "inline-flex items-center justify-center rounded-md  font-medium transition-colors focus:outline-none disabled:opacity-50  disabled:pointer-events-none dark:focus:ring-offset-slate-900 rounded-radius-default antialiased",
   {
     variants: {
       variant: {
         default:
-          "bg-product-primary text-base text-btn-text-primary hover:product-primary dark:product-primary dark:text-slate-900 dark:hover:bg-product-primary",
-        destructive: "text-white hover:bg-red-600 dark:hover:bg-red-600 ",
+          "bg-color-primary text-color-secondary gap-gap-btn-text font-fw-btn-default active:scale-95	",
+        danger:
+          "bg-color-danger text-color-white gap-gap-btn-text font-fw-btn-default active:scale-95	",
         outline:
-          "bg-transparent text-base  btn-text-primary border-2	border-slate-300",
-        subtle:
-          "bg-slate-100 text-slate-900 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-100",
+          "bg-transparent text-color-secondary gap-gap-btn-text btn-height-default font-fw-btn-default text-base border-2	border-slate-300 active:scale-95	",
         ghost:
-          "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 dark:text-slate-400 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent",
-        link: "bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-slate-900 dark:text-slate-100 hover:bg-transparent dark:hover:bg-transparent",
+          "bg-transparent text-transparent  hover:bg-color-primary hover:text-color-secondary gap-gap-btn-text font-fw-btn-default active:scale-95	",
+        link: "bg-transparent text-color-link gap-gap-btn-text font-fw-btn-default ",
       },
       size: {
-        default: "h-10 py-6 px-5",
-        sm: "h-9 px-2 rounded-md",
-        lg: "h-11 px-8 rounded-md",
+        default: "btn-height-default p-padding-btn-default text-base",
+        sm: "btn-height-sm p-padding-btn-sm text-sm",
+        lg: "btn-height-lg p-padding-btn-lg text-lg",
       },
     },
     defaultVariants: {
